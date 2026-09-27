@@ -27,6 +27,7 @@ h1 { font-size: clamp(2.7rem, 6vw, 4.6rem); line-height:1.02; letter-spacing:-.0
 h2 { font-size:2rem; line-height:1.2; margin:0 0 18px; letter-spacing:-.02em; }
 h3 { font-size:1.18rem; margin:0 0 8px; }
 .lead { font-size:1.18rem; color:#475467; max-width:760px; }
+.academic-line { color:#59636f; max-width:760px; margin:8px 0 0; font-size:1rem; }
 .hero-links { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
 .button { display:inline-block; padding:10px 17px; border-radius:8px; border:1px solid var(--accent); font-weight:600; font-size:.92rem; }
 .button.primary { background:var(--accent); color:#fff; }
@@ -85,14 +86,14 @@ ul.clean { padding-left:20px; }
 .research-interests { display:flex; flex-direction:column; gap:20px; }
 .interest-card {
   display:grid;
-  grid-template-columns:68px 1fr;
-  gap:22px;
+  grid-template-columns:24px 1fr;
+  gap:18px;
   padding:28px;
   border:1px solid var(--line);
   border-radius:14px;
   background:#fff;
 }
-.interest-number { color:var(--accent); font-size:1.05rem; font-weight:750; padding-top:2px; }
+.interest-bullet { color:var(--accent); font-size:.78rem; padding-top:6px; }
 .interest-card p { color:#59636f; margin:8px 0 0; }
 .paper-links { display:flex; flex-direction:column; gap:7px; margin-top:15px; font-size:.9rem; }
 .paper-links a { font-weight:600; }
@@ -124,6 +125,6 @@ ul.clean { padding-left:20px; }
   .word.size-md { font-size:1.1rem; }
   .word.size-sm { font-size:.9rem; }
   .interest-card { grid-template-columns:1fr; gap:8px; padding:22px; }
-  .interest-number { font-size:.85rem; }
+  .interest-bullet { font-size:.7rem; padding-top:0; }
   .event-item { grid-template-columns:65px 1fr; gap:12px; }
 }
