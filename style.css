@@ -50,30 +50,80 @@ h3 { font-size:1.18rem; margin:0 0 8px; }
 .page-hero { padding:64px 0 44px; background:var(--soft); border-bottom:1px solid var(--line); }
 .page-hero p { color:#59636f; max-width:760px; }
 .download-row { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0 0; }
-.photo-grid {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.photo {
-  width: 260px;
-  height: 195px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: var(--soft);
-}
+.photo-grid { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.photo { width: 260px; height: 195px; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); background: var(--soft); }
 .photo.placeholder { display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:.9rem; text-align:center; padding:20px; }
 .footer { border-top:1px solid var(--line); padding:30px 0; color:var(--muted); font-size:.88rem; }
 .footer-inner { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
 ul.clean { padding-left:20px; }
+
+/* Homepage research word cloud */
+.word-cloud-section { padding-top:64px; padding-bottom:64px; }
+.word-cloud {
+  min-height:230px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  align-content:center;
+  gap:10px 16px;
+  flex-wrap:wrap;
+  max-width:900px;
+  margin:0 auto;
+  padding:24px 10px;
+}
+.word { display:inline-block; color:var(--accent); line-height:1.15; font-weight:650; white-space:nowrap; }
+.word.size-xl { font-size:2.15rem; }
+.word.size-lg { font-size:1.65rem; }
+.word.size-md { font-size:1.3rem; }
+.word.size-sm { font-size:1rem; color:#52677d; }
+.contact-section { text-align:left; }
+
+/* Research page */
+.research-profiles { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+.profile-link { display:inline-block; padding:9px 14px; border:1px solid var(--accent); border-radius:8px; font-weight:650; background:#fff; }
+.profile-link:hover { text-decoration:none; background:#eef4f9; }
+.research-interests { display:flex; flex-direction:column; gap:20px; }
+.interest-card {
+  display:grid;
+  grid-template-columns:68px 1fr;
+  gap:22px;
+  padding:28px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+}
+.interest-number { color:var(--accent); font-size:1.05rem; font-weight:750; padding-top:2px; }
+.interest-card p { color:#59636f; margin:8px 0 0; }
+.paper-links { display:flex; flex-direction:column; gap:7px; margin-top:15px; font-size:.9rem; }
+.paper-links a { font-weight:600; }
+.interest-note { font-size:.9rem; margin-top:14px !important; }
+
+.publication-highlight { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+.publication-card { padding:24px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+.publication-card.featured { box-shadow:0 8px 24px rgba(23,74,126,.05); }
+.publication-label { display:inline-block; margin-bottom:10px; font-size:.74rem; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); font-weight:750; }
+.publication-card h3 { line-height:1.4; }
+.text-link { display:inline-block; margin-top:12px; font-weight:650; }
+.event-list { display:flex; flex-direction:column; }
+.event-item { display:grid; grid-template-columns:90px 1fr; gap:20px; padding:18px 0; border-bottom:1px solid var(--line); }
+.event-item:last-child { border-bottom:0; }
+.event-year { color:var(--accent); font-weight:750; }
+.event-item h3 { margin-bottom:4px; }
+.event-item p { margin:0; color:var(--muted); }
+
 @media (max-width: 780px) {
   .nav { align-items:flex-start; padding:15px 0; flex-direction:column; }
   .nav-links { gap:12px 16px; }
   .hero-grid { grid-template-columns:1fr; gap:35px; }
   .headshot { margin:0; width:190px; height:235px; }
-  .cards, .photo-grid { grid-template-columns:1fr; }
+  .cards, .photo-grid, .publication-highlight { grid-template-columns:1fr; }
   .section { padding:54px 0; }
+  .word-cloud { min-height:190px; gap:9px 12px; }
+  .word.size-xl { font-size:1.75rem; }
+  .word.size-lg { font-size:1.35rem; }
+  .word.size-md { font-size:1.1rem; }
+  .word.size-sm { font-size:.9rem; }
+  .interest-card { grid-template-columns:1fr; gap:8px; padding:22px; }
+  .interest-number { font-size:.85rem; }
+  .event-item { grid-template-columns:65px 1fr; gap:12px; }
 }
